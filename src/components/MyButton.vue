@@ -5,14 +5,13 @@
 </template>
 
 <script lang="ts">
-export default {
-  name: 'my-button',
+import { Component, Vue } from 'vue-property-decorator'
 
-  methods: {
-    onClick () {
-      console.log('click')
-      console.log('>> Enviroments:', process.env)
-    }
+@Component
+export default class MyButton extends Vue {
+  onClick () {
+    console.log('click')
+    console.log('>> Enviroments:', process.env)
   }
 }
 </script>

@@ -6,6 +6,9 @@
       check out the
       <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
     </p>
+    <my-button>
+      Click me to show process.env in the browser console
+    </my-button>
     <h3>Installed CLI Plugins</h3>
     <ul>
       <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel" target="_blank" rel="noopener">babel</a></li>
@@ -35,8 +38,11 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator'
+import MyButton from '@/components/MyButton.vue'
 
-@Component
+@Component({
+  components: { MyButton }
+})
 export default class HelloWorld extends Vue {
   @Prop() private msg!: string;
 }
